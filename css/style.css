@@ -4,7 +4,7 @@
 @import url(font.css);
 
 body {font-family: "Pretendard", sans-serif;}
-.container{max-width: 1620px;margin: 0 auto;border: 1px solid #000;}
+.container{max-width: 1620px;margin: 0 auto;}
 
 
 header {height: 178px;}
@@ -12,8 +12,9 @@ header {height: 178px;}
 
 header .topset{display: flex;justify-content: space-between;}
 header .langbox{display: flex;font-size: 14px;gap: 13px;align-items: center;color: #808080;margin-left: 6.5vw;}
-header .langbox a{padding: 10px 0;color: #808080;}
-header .langbox a.on{color: #05456e;font-weight:600;}
+header nav .gnb{display: flex;justify-content: space-between;}
+header nav .gnb > li{font-size: 20px;flex-grow: 1;transition: 0.2s;position: relative;}
+header nav .gnb >li>a{color: #05456e;padding: 25px 40px;display: flex;justify-content: center;}
 
 header h1{margin-top: 20px;}
 header h1 a{}
@@ -22,12 +23,18 @@ header h1 a img{}
 header .baro{display: flex;gap: 25px;align-items: center;margin-right: 6.5vw;}
 header .baro a{padding: 10px 0;font-size: 14px;color: #808080;}
 
-header nav{}
-header nav .gnb{display: flex;justify-content: space-between;}
-header nav .gnb li{font-size: 20px;flex-grow: 1;transition: .2s;}
-header nav .gnb li a{color: #05456e;padding: 25px 40px;display: flex;justify-content: center;}
+header nav .gnb >li:hover{font-size: 24px;font-weight: bold;}
 
-header nav .gnb li:hover{font-size: 24px;font-weight: bold;}
+header nav .gnb >li:hover .lnb{opacity: 1;visibility: visible;top: 90%;}
+
+header nav .gnb .lnb{position: absolute;background: #fff;padding: 49px 36px;display: flex;left: 0;top: 120%;box-shadow: 4px 6px 60px rgba(0, 0, 0, 0.1);justify-content: center;width: 130%;opacity: 0;transition: 0.3s;visibility: hidden;}
+header nav .gnb .lnb figure{padding-right: 38px;border-right: 1px solid #000;display: flex;align-items: center;white-space:nowrap ;}
+header nav .gnb .lnb figure img{}
+header nav .gnb .lnb ul{display: flex;flex-wrap: wrap;gap: 17px 0;padding-left: 38px;}
+header nav .gnb .lnb ul li{font-size: 18px;width: 50%;text-align: center;box-sizing: border-box;}
+header nav .gnb .lnb ul li a{padding: 5px 0;display: block;}
+
+header nav .gnb li:last-child .lnb{right: 0;left: auto;}
 
 .hero{height: 650px; background: #eee;}
 
